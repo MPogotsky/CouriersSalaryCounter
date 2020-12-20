@@ -24,13 +24,9 @@ private:
     double totalIncome;
     double delPerHour;
 
-public:
-    EmployeeType()
-            : hours(0), minutes(0), deliveries(0), allHours(0), totalIncome(0), hourIncome(0), bonuses(0),
-              incPerHour(0), tips(0) {
-    }
-
     const int phoneBonus = 25;
+
+protected:
 
     void setHours(int howManyHours);
 
@@ -81,6 +77,14 @@ public:
 
     void countDelPerHour();
 
+    virtual void countAllData();
+
+public:
+    EmployeeType(int hours, double minutes, int deliveries, double tips)
+            : hours(0), minutes(0), deliveries(0), allHours(0), totalIncome(0), hourIncome(0), bonuses(0),
+              incPerHour(0), tips(0) {
+    }
+
     void showStatistics();
 
     ~EmployeeType() = default;
@@ -89,15 +93,33 @@ public:
 class Student : public EmployeeType {
 public:
 
-    Student(int hours, double minutes, int deliveries, double tips) {
-        setHours(hours);
-        setMinutes(minutes);
-        setDeliveries(deliveries);
-        setTips(tips);
+    Student(int hours, double minutes, int deliveries, double tips) : EmployeeType(hours, minutes, deliveries, tips){
         setIncome(COURIER_INC_PER_H);
     }
 
-    ~Student(){};
+    ~Student() {};
+};
+
+class Courier : public EmployeeType{
+private:
+    struct taxes{
+        double healthTax = 0.1126;
+        double incomeTax = 0.18;
+        double heathContribution1 = 0.09;
+        double heathContribution2 = 0.0775;
+    };
+
+    double healthTaxBasis;
+    double incomeTaxBasis;
+
+    double incomeAfterTaxFee;
+
+public:
+    Courier(int hours, double minutes, int deliveries, double tips) : EmployeeType(hours, minutes, deliveries, tips){
+        setIncome(COURIER_INC_PER_H);
+    }
+
+    ~Courier() {};
 };
 
 #include "EmployeeType.cpp"

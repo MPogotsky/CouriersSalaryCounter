@@ -4,24 +4,25 @@ using namespace std;
 
 int main() {
 
-    cout << "How many full hours you`ve worked?: " << endl;
-    int hours;
-    cin >> hours;
+    int hours = 105;
+    int minutes = 95;
+    int deliveries = 231;
+    double tips = 13.40;
 
-    cout << "How many minutes left?: " << endl;
-    int minutes;
-    cin >> minutes;
+//    cout << "How many full hours you`ve worked?: " << endl;
+//    cin >> hours;
+//    cout << "How many minutes left?: " << endl;
+//    cin >> minutes;
+//    cout << "How many deliveries you`ve made?: " << endl;
+//    cin >> deliveries;
+//    cout << "How many tips you`ve earned?: " << endl;
+//    cin >> tips;
 
-    cout << "How many deliveries you`ve made?: " << endl;
-    int deliveries;
-    cin >> deliveries;
+    Student student(hours, minutes, deliveries, tips);
+    student.showStatistics();
 
-    cout << "How many tips you`ve earned?: " << endl;
-    int tips;
-    cin >> tips;
-
-    Student student1(hours, minutes, deliveries, tips);
-    student1.showStatistics();
+    Courier courier(hours, minutes, deliveries, tips);
+    courier.showStatistics();
 
     return 0;
 }

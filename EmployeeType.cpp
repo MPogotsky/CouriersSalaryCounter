@@ -55,13 +55,17 @@ void EmployeeType::countTotalIncome(){
     totalIncome += hourIncome + phoneBonus + tips;
 }
 
-void EmployeeType::showStatistics() {
-
+void EmployeeType::countAllData() {
     countAllHours();
     countDelPerHour();
     countHourIncome();
     countBonuses();
     countTotalIncome();
+}
+
+void EmployeeType::showStatistics() {
+
+    countAllData();
 
     std::cout << "Your`s statistic:";
     std::cout << std::setw(10)<< std::left << "\n Hours  \t"      <<  allHours << "h " << minutes <<"min";
