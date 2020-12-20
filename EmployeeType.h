@@ -1,5 +1,5 @@
-#ifndef PYSZNEPLCOUNTER_EMPLOYEETYPE_H
-#define PYSZNEPLCOUNTER_EMPLOYEETYPE_H
+#ifndef SALARYCOUNTER_EMPLOYEETYPE_H
+#define SALARYCOUNTER_EMPLOYEETYPE_H
 
 #include <iostream>
 #include <iomanip>
@@ -10,7 +10,6 @@
 
 class EmployeeType {
 private:
-
     int hours;
     double minutes;
     int deliveries;
@@ -109,6 +108,7 @@ public:
     ~CourierStudent() {};
 };
 
+
 class CaptainStudent : public EmployeeType {
 public:
     CaptainStudent(int hours, double minutes, int deliveries, double tips) : EmployeeType(hours, minutes, deliveries,
@@ -118,6 +118,7 @@ public:
 
     ~CaptainStudent() {};
 };
+
 
 class Courier : public EmployeeType {
 private:
@@ -149,6 +150,7 @@ public:
     ~Courier() {};
 };
 
+
 class Captain : public Courier {
 public:
     Captain(int hours, double minutes, int deliveries, double tips) : Courier(hours, minutes, deliveries, tips) {
@@ -160,4 +162,4 @@ public:
 
 #include "EmployeeType.cpp"
 
-#endif //PYSZNEPLCOUNTER_EMPLOYEETYPE_H
+#endif //SALARYCOUNTER_EMPLOYEETYPE_H

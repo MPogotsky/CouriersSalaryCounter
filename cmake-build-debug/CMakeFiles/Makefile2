@@ -52,7 +52,7 @@ CMAKE_BINARY_DIR = D:\C++PROJECTS\PysznePlCounter\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/PysznePlCounter.dir/all
+all: CMakeFiles/SalaryCounter.dir/all
 
 .PHONY : all
 
@@ -62,36 +62,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/PysznePlCounter.dir/clean
+clean: CMakeFiles/SalaryCounter.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/PysznePlCounter.dir
+# Target rules for target CMakeFiles/SalaryCounter.dir
 
 # All Build rule for target.
-CMakeFiles/PysznePlCounter.dir/all:
-	$(MAKE) -f CMakeFiles\PysznePlCounter.dir\build.make CMakeFiles/PysznePlCounter.dir/depend
-	$(MAKE) -f CMakeFiles\PysznePlCounter.dir\build.make CMakeFiles/PysznePlCounter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C++PROJECTS\PysznePlCounter\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target PysznePlCounter"
-.PHONY : CMakeFiles/PysznePlCounter.dir/all
+CMakeFiles/SalaryCounter.dir/all:
+	$(MAKE) -f CMakeFiles\SalaryCounter.dir\build.make CMakeFiles/SalaryCounter.dir/depend
+	$(MAKE) -f CMakeFiles\SalaryCounter.dir\build.make CMakeFiles/SalaryCounter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\C++PROJECTS\PysznePlCounter\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target SalaryCounter"
+.PHONY : CMakeFiles/SalaryCounter.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/PysznePlCounter.dir/rule: cmake_check_build_system
+CMakeFiles/SalaryCounter.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\C++PROJECTS\PysznePlCounter\cmake-build-debug\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/PysznePlCounter.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/SalaryCounter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\C++PROJECTS\PysznePlCounter\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/PysznePlCounter.dir/rule
+.PHONY : CMakeFiles/SalaryCounter.dir/rule
 
 # Convenience name for target.
-PysznePlCounter: CMakeFiles/PysznePlCounter.dir/rule
+SalaryCounter: CMakeFiles/SalaryCounter.dir/rule
 
-.PHONY : PysznePlCounter
+.PHONY : SalaryCounter
 
 # clean rule for target.
-CMakeFiles/PysznePlCounter.dir/clean:
-	$(MAKE) -f CMakeFiles\PysznePlCounter.dir\build.make CMakeFiles/PysznePlCounter.dir/clean
-.PHONY : CMakeFiles/PysznePlCounter.dir/clean
+CMakeFiles/SalaryCounter.dir/clean:
+	$(MAKE) -f CMakeFiles\SalaryCounter.dir\build.make CMakeFiles/SalaryCounter.dir/clean
+.PHONY : CMakeFiles/SalaryCounter.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

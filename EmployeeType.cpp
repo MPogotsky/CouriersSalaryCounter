@@ -1,6 +1,6 @@
 
 #include "EmployeeType.h"
-
+//add_executable(PysznePlCounter main.cpp)
 void EmployeeType::setHours(int howManyHours){
     hours = howManyHours;
 }

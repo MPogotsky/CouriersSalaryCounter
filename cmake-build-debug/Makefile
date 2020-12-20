@@ -55,17 +55,6 @@ CMAKE_BINARY_DIR = D:\C++PROJECTS\PysznePlCounter\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	C:\Users\ACER\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.6668.126\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -76,6 +65,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	C:\Users\ACER\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\201.6668.126\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PysznePlCounter
+# Target rules for targets named SalaryCounter
 
 # Build rule for target.
-PysznePlCounter: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 PysznePlCounter
-.PHONY : PysznePlCounter
+SalaryCounter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 SalaryCounter
+.PHONY : SalaryCounter
 
 # fast build rule for target.
-PysznePlCounter/fast:
-	$(MAKE) -f CMakeFiles\PysznePlCounter.dir\build.make CMakeFiles/PysznePlCounter.dir/build
-.PHONY : PysznePlCounter/fast
+SalaryCounter/fast:
+	$(MAKE) -f CMakeFiles\SalaryCounter.dir\build.make CMakeFiles/SalaryCounter.dir/build
+.PHONY : SalaryCounter/fast
 
 main.obj: main.cpp.obj
 
@@ -128,7 +128,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) -f CMakeFiles\PysznePlCounter.dir\build.make CMakeFiles/PysznePlCounter.dir/main.cpp.obj
+	$(MAKE) -f CMakeFiles\SalaryCounter.dir\build.make CMakeFiles/SalaryCounter.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -137,7 +137,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles\PysznePlCounter.dir\build.make CMakeFiles/PysznePlCounter.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles\SalaryCounter.dir\build.make CMakeFiles/SalaryCounter.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -146,7 +146,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles\PysznePlCounter.dir\build.make CMakeFiles/PysznePlCounter.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles\SalaryCounter.dir\build.make CMakeFiles/SalaryCounter.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -155,9 +155,9 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... PysznePlCounter
-	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... SalaryCounter
+	@echo ... edit_cache
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
