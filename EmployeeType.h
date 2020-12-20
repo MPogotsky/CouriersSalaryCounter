@@ -69,7 +69,6 @@ protected:
         return hourIncome;
     }
 
-
     void countAllHours();
 
     void countHourIncome();
@@ -87,7 +86,7 @@ protected:
 public:
     EmployeeType(int hours, double minutes, int deliveries, double tips)
             : allHours(0), totalIncome(0), hourIncome(0), bonuses(0),
-              incPerHour(0){
+              incPerHour(0) {
         setHours(hours);
         setMinutes(minutes);
         setDeliveries(deliveries);
@@ -99,19 +98,30 @@ public:
     ~EmployeeType() = default;
 };
 
-class Student : public EmployeeType {
+class CourierStudent : public EmployeeType {
 public:
 
-    Student(int hours, double minutes, int deliveries, double tips) : EmployeeType(hours, minutes, deliveries, tips){
+    CourierStudent(int hours, double minutes, int deliveries, double tips) : EmployeeType(hours, minutes, deliveries,
+                                                                                          tips) {
         setIncome(COURIER_INC_PER_H);
     }
 
-    ~Student() {};
+    ~CourierStudent() {};
 };
 
-class Courier : public EmployeeType{
+class CaptainStudent : public EmployeeType {
+public:
+    CaptainStudent(int hours, double minutes, int deliveries, double tips) : EmployeeType(hours, minutes, deliveries,
+                                                                                          tips) {
+        setIncome(CAP_INC_PER_H);
+    }
+
+    ~CaptainStudent() {};
+};
+
+class Courier : public EmployeeType {
 private:
-    struct taxes{
+    struct taxes {
         double healthTax = 0.1126;
         double incomeTax = 0.18;
         double heathContribution1 = 0.09;
@@ -132,11 +142,20 @@ protected:
     void countAllData() override;
 
 public:
-    Courier(int hours, double minutes, int deliveries, double tips) : EmployeeType(hours, minutes, deliveries, tips){
+    Courier(int hours, double minutes, int deliveries, double tips) : EmployeeType(hours, minutes, deliveries, tips) {
         setIncome(COURIER_INC_PER_H);
     }
 
     ~Courier() {};
+};
+
+class Captain : public Courier {
+public:
+    Captain(int hours, double minutes, int deliveries, double tips) : Courier(hours, minutes, deliveries, tips) {
+        setIncome(CAP_INC_PER_H);
+    }
+
+    ~Captain() {};
 };
 
 #include "EmployeeType.cpp"

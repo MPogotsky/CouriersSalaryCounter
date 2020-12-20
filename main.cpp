@@ -18,11 +18,17 @@ int main() {
 //    cout << "How many tips you`ve earned?: " << endl;
 //    cin >> tips;
 
-    Student student(hours, minutes, deliveries, tips);
+    CourierStudent student(hours, minutes, deliveries, tips);
     student.showStatistics();
 
     Courier courier(hours, minutes, deliveries, tips);
     courier.showStatistics();
+
+    CaptainStudent captainStudent(hours, minutes, deliveries, tips);
+    captainStudent.showStatistics();
+
+    Captain captain(hours, minutes, deliveries, tips);
+    captain.showStatistics();
 
     return 0;
 }
