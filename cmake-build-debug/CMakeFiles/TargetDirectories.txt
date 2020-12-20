@@ -1,0 +1,3 @@
+D:/C++PROJECTS/PysznePlCounter/cmake-build-debug/CMakeFiles/PysznePlCounter.dir
+D:/C++PROJECTS/PysznePlCounter/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/C++PROJECTS/PysznePlCounter/cmake-build-debug/CMakeFiles/rebuild_cache.dir

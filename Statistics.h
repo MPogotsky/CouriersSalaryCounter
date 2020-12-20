@@ -1,0 +1,14 @@
+//
+// Created by ACER on 20.12.2020.
+//
+
+#ifndef PYSZNEPLCOUNTER_STATISTICS_H
+#define PYSZNEPLCOUNTER_STATISTICS_H
+
+
+class Statistics {
+
+};
+
+
+#endif //PYSZNEPLCOUNTER_STATISTICS_H

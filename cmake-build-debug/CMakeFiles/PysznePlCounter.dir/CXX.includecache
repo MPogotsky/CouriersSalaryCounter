@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/C++PROJECTS/PysznePlCounter/EmployeeType.cpp
+
+D:/C++PROJECTS/PysznePlCounter/EmployeeType.h
+iostream
+-
+iomanip
+-
+cmath
+-
+EmployeeType.cpp
+D:/C++PROJECTS/PysznePlCounter/EmployeeType.cpp
+
+D:/C++PROJECTS/PysznePlCounter/main.cpp
+EmployeeType.h
+D:/C++PROJECTS/PysznePlCounter/EmployeeType.h
+
