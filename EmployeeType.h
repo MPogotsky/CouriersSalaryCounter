@@ -38,6 +38,8 @@ protected:
 
     void setTips(double howManyTips);
 
+    void setTotalIncome(double incomeAfterTaxes);
+
 
     int getHours() const {
         return hours;
@@ -67,6 +69,7 @@ protected:
         return hourIncome;
     }
 
+
     void countAllHours();
 
     void countHourIncome();
@@ -77,12 +80,18 @@ protected:
 
     void countDelPerHour();
 
+protected:
+
     virtual void countAllData();
 
 public:
     EmployeeType(int hours, double minutes, int deliveries, double tips)
-            : hours(0), minutes(0), deliveries(0), allHours(0), totalIncome(0), hourIncome(0), bonuses(0),
-              incPerHour(0), tips(0) {
+            : allHours(0), totalIncome(0), hourIncome(0), bonuses(0),
+              incPerHour(0){
+        setHours(hours);
+        setMinutes(minutes);
+        setDeliveries(deliveries);
+        setTips(tips);
     }
 
     void showStatistics();
@@ -109,10 +118,18 @@ private:
         double heathContribution2 = 0.0775;
     };
 
+    taxes tax;
+
     double healthTaxBasis;
     double incomeTaxBasis;
 
     double incomeAfterTaxFee;
+
+    double incomeAfterTaxes();
+
+protected:
+
+    void countAllData() override;
 
 public:
     Courier(int hours, double minutes, int deliveries, double tips) : EmployeeType(hours, minutes, deliveries, tips){
